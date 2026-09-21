@@ -1,0 +1,148 @@
+/* =============================================================================
+   animations.css — Sistema de animaciones de UXcode Solutions
+   Keyframes y clases para la directiva v-reveal y los efectos premium.
+   REGLA CENTRAL: solo transform y opacity (acelerados por GPU).
+   ============================================================================= */
+
+/* ── Estado inicial de elementos con v-reveal ────────────────────────────── */
+/* Solo se activa cuando el plugin de cliente cargó (clase reveal-ready en html) */
+html.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateX(-60px);
+  /* will-change se activa solo durante la animación para no afectar rendimiento */
+}
+
+/* ── Estado: elemento entró al viewport (viene desde la izquierda) ────────── */
+html.reveal-ready .reveal.is-in {
+  opacity: 1;
+  transform: translateX(0);
+  transition:
+    opacity var(--transition-reveal),
+    transform var(--transition-reveal);
+  /* Retraso escalonado controlado por JS mediante variable CSS */
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: auto; /* Liberar after animation */
+}
+
+/* ── Estado: elemento salió del viewport (va hacia la derecha) ───────────── */
+html.reveal-ready .reveal.is-out {
+  opacity: 0;
+  transform: translateX(60px);
+  /* Sin delay en la salida — inmediata pero suave */
+  transition:
+    opacity 400ms cubic-bezier(0.2,0.7,0.2,1),
+    transform 400ms cubic-bezier(0.2,0.7,0.2,1);
+  will-change: opacity, transform;
+}
+
+/* ── Modo de movimiento reducido ─────────────────────────────────────────── */
+/* Con prefers-reduced-motion: solo fundido suave, sin desplazamiento lateral */
+@media (prefers-reduced-motion: reduce) {
+  html.reveal-ready .reveal { opacity: 0; transform: none; }
+  html.reveal-ready .reveal.is-in {
+    opacity: 1;
+    transform: none;
+    transition: opacity 400ms ease;
+    transition-delay: 0ms !important;
+  }
+  html.reveal-ready .reveal.is-out { opacity: 0; transform: none; }
+}
+
+/* ── Keyframe: degradado animado en texto destacado del hero ─────────────── */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-text-animated {
+  background: linear-gradient(135deg, #00D4D4, #004CDF, #00D4D4);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ── Keyframe: flotación suave (orbes del hero, tarjetas flotantes) ──────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-10px) scale(1.02); }
+}
+
+.float { animation: float 6s ease-in-out infinite; }
+.float-slow { animation: floatSlow 8s ease-in-out infinite; }
+.float-delay-1 { animation-delay: -2s; }
+.float-delay-2 { animation-delay: -4s; }
+
+/* ── Keyframe: orbes de fondo en el hero ─────────────────────────────────── */
+@keyframes orbPulse {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.5; }
+  33%       { transform: scale(1.15) translate(20px, -15px); opacity: 0.7; }
+  66%       { transform: scale(0.95) translate(-10px, 20px); opacity: 0.4; }
+}
+
+/* ── Keyframe: spinner de carga (botón loading) ──────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+  vertical-align: middle;
+}
+
+/* ── Keyframe: indicador de scroll (hero bottom) ─────────────────────────── */
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50%       { transform: translateY(8px); opacity: 0.5; }
+}
+
+/* ── Keyframe: entrada del hero (al cargar la página) ────────────────────── */
+@keyframes heroEnter {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.hero-animate-1 { animation: heroEnter 0.7s cubic-bezier(0.2,0.7,0.2,1) 0.1s both; }
+.hero-animate-2 { animation: heroEnter 0.7s cubic-bezier(0.2,0.7,0.2,1) 0.25s both; }
+.hero-animate-3 { animation: heroEnter 0.7s cubic-bezier(0.2,0.7,0.2,1) 0.4s both; }
+.hero-animate-4 { animation: heroEnter 0.7s cubic-bezier(0.2,0.7,0.2,1) 0.55s both; }
+
+/* ── Keyframe: marquee horizontal (TechStrip) ────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Línea conectora de proceso (ProcessSteps) ───────────────────────────── */
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* ── Fade-in simple (mensajes de éxito/error) ────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeIn 0.5s ease both; }
+
+/* ── Check animado (confirmación de formulario) ──────────────────────────── */
+@keyframes checkDraw {
+  from { stroke-dashoffset: 60; }
+  to   { stroke-dashoffset: 0; }
+}

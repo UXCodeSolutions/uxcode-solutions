@@ -1,0 +1,74 @@
+/* =============================================================================
+   tokens.css — Sistema de design tokens de UXcode Solutions (Neon/Glassy Identity)
+   Define variables CSS globales: colores, tipografía, espaciado, sombras y
+   transiciones. Toda la marca arranca desde aquí.
+   ============================================================================= */
+
+:root {
+  /* ── Paleta de marca ──────────────────────────────────────────────────── */
+  --bg:          #0A0A0E;   /* Fondo general ultra oscuro, leve tinte azul */
+  --text:        #FFFFFF;   /* Texto principal blanco puro */
+  --accent:      #00FFFF;   /* Cyan Neon — acento principal */
+  --accent-2:    #0066FF;   /* Azul Vibrante — acento secundario */
+
+  /* Degradado principal (botones, títulos clave, elementos destacados) */
+  --gradient: linear-gradient(135deg, #00FFFF 0%, #0066FF 100%);
+  --gradient-hover: linear-gradient(135deg, #33FFFF 0%, #3385FF 100%);
+
+  /* ── Superficies y bordes (Glassmorphism) ─────────────────────────────── */
+  --surface:    rgba(15, 15, 25, 0.6);   /* Tarjetas glassmorphism */
+  --surface-2:  rgba(25, 25, 40, 0.8);   /* Hover de tarjetas, inputs */
+  --border:     rgba(0, 255, 255, 0.15); /* Bordes con ligero tinte neon */
+
+  /* ── Texto secundario ────────────────────────────────────────────────── */
+  --text-muted: rgba(255, 255, 255, 0.65);
+
+  /* ── Estados funcionales ─────────────────────────────────────────────── */
+  --danger:  #FF3366;  /* Errores de formulario neon */
+  --success: #00FF99;  /* Confirmaciones neon */
+
+  /* ── Tipografía (Rounded & Tech) ─────────────────────────────────────── */
+  --font-title: 'Outfit', system-ui, sans-serif;
+  --font-body:  'Inter', system-ui, sans-serif;
+
+  /* Escala fluida con clamp() — se adapta sin media queries */
+  --fs-h1: clamp(2.5rem, 6vw, 5rem);
+  --fs-h2: clamp(2rem, 4.5vw, 3.5rem);
+  --fs-h3: clamp(1.35rem, 2.5vw, 1.8rem);
+  --fs-h4: clamp(1.15rem, 1.5vw, 1.4rem);
+  --fs-body: clamp(1rem, 1.2vw, 1.125rem);
+  --fs-small: 0.875rem;
+  --lh-body: 1.6;
+
+  /* ── Espaciado ───────────────────────────────────────────────────────── */
+  --section-py: clamp(5rem, 10vw, 9rem);
+  --container-max: 1200px;
+  --container-px: clamp(1.25rem, 5vw, 2.5rem);
+
+  /* ── Radios (Más redondeados para igualar el logo) ───────────────────── */
+  --radius-card:   24px;
+  --radius-btn:    999px;  /* Totalmente redondeado (pill) */
+  --radius-input:  16px;
+  --radius-badge:  999px;
+  --radius-sm:     12px;
+
+  /* ── Sombras (Efectos Neon / Glow) ───────────────────────────────────── */
+  --shadow-card:  0 8px 32px rgba(0, 102, 255, 0.1);
+  --shadow-glow:  0 0 20px rgba(0, 255, 255, 0.2);   /* Resplandor cian base */
+  --shadow-glow-strong: 0 0 40px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 102, 255, 0.6);
+  --shadow-btn:   0 4px 15px rgba(0, 255, 255, 0.3);
+
+  /* ── Transiciones ────────────────────────────────────────────────────── */
+  --transition-fast:   150ms cubic-bezier(0.25,1,0.25,1);
+  --transition-base:   300ms cubic-bezier(0.25,1,0.25,1);
+  --transition-slow:   500ms cubic-bezier(0.25,1,0.25,1);
+  --transition-reveal: 800ms cubic-bezier(0.2,0.8,0.2,1);
+
+  /* ── Navbar ──────────────────────────────────────────────────────────── */
+  --navbar-h: 80px;
+
+  /* ── Z-index ─────────────────────────────────────────────────────────── */
+  --z-nav:     100;
+  --z-modal:   200;
+  --z-overlay: 300;
+}

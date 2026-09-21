@@ -1,0 +1,389 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "portfolio": "Portafolio",
+    "about": "Nosotros",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "cta": "Prueba 15 días",
+    "skip": "Saltar al contenido"
+  },
+  "footer": {
+    "tagline": "We create IDEAS, we create INNOVATION!",
+    "description": "Convertimos ideas en apps, sistemas y soluciones digitales. Rápido, a tu medida y con trato humano.",
+    "quickLinks": "Páginas",
+    "services": "Servicios",
+    "social": "Redes sociales",
+    "copyright": "UXcode Solutions — \"We create IDEAS, we create INNOVATION!\"",
+    "backToTop": "Volver arriba",
+    "socialSoon": "Próximamente"
+  },
+  "hero": {
+    "pill": "Desarrollo de software para emprendedores",
+    "h1_pre": "Tu idea, funcionando en",
+    "h1_accent": "tiempo récord",
+    "h1_post": ".",
+    "subtitle": "En UXcode Solutions convertimos ideas en apps, sistemas y soluciones digitales. Rápido, a tu medida y con trato humano.",
+    "ctaPrimary": "Saber más",
+    "ctaSecondary": "Ver portafolio",
+    "chip1": "Desarrollo con IA + criterio humano",
+    "chip2": "15 días de prueba en nuestros sistemas",
+    "chip3": "Creamos nuestros propios productos",
+    "scrollIndicator": "Descubre más"
+  },
+  "techStrip": {
+    "label": "Construimos con"
+  },
+  "servicesSection": {
+    "title_pre": "Soluciones para hacer crecer tu",
+    "title_accent": "idea",
+    "subtitle": "Del concepto al producto funcional. Sin plantillas, sin rodeos.",
+    "viewAll": "Ver todos los servicios",
+    "learnMore": "Saber más"
+  },
+  "services": {
+    "apps-flutter": {
+      "title": "Apps móviles con Flutter",
+      "description": "Tu app para Android y iOS desde un solo código. Rápida, fluida y pensada para tus usuarios.",
+      "cta": "Cotizar mi proyecto",
+      "points": [
+        "Una sola base de código para Android e iOS",
+        "Interfaz nativa y fluida",
+        "Integración con backends y APIs",
+        "Lanzamiento guiado en las tiendas"
+      ]
+    },
+    "sistemas-gestion": {
+      "title": "Sistemas de gestión a medida",
+      "description": "Automatiza tu negocio con un sistema hecho a tu manera de trabajar: clientes, citas, inventario, reportes y más.",
+      "cta": "Cotizar mi proyecto",
+      "points": [
+        "Diseñado según tu flujo de trabajo real",
+        "Gestión de clientes, citas e inventario",
+        "Reportes y estadísticas en tiempo real",
+        "Acceso web o móvil"
+      ]
+    },
+    "soluciones-digitales": {
+      "title": "Soluciones digitales y sitios web",
+      "description": "Sitios web, plataformas y herramientas digitales que presentan tu marca y te ayudan a captar clientes.",
+      "cta": "Cotizar mi proyecto",
+      "points": [
+        "Diseño profesional y diferenciado",
+        "Optimizado para buscadores (SEO)",
+        "Rápido, seguro y adaptable",
+        "Integración con herramientas de marketing"
+      ]
+    },
+    "sistemas-renta": {
+      "title": "Sistemas en renta (licencia)",
+      "description": "Usa sistemas listos, como Dokko, con módulos para inmobiliarias, salones, barberías y gimnasios. Pruébalo 15 días sin compromiso.",
+      "cta": "Probar 15 días",
+      "points": [
+        "Sistema listo desde el primer día",
+        "Módulos para distintos tipos de negocio",
+        "15 días de prueba real sin compromiso",
+        "Soporte y actualizaciones incluidas"
+      ]
+    }
+  },
+  "pillars": {
+    "title_pre": "Por qué",
+    "title_accent": "UXcode Solutions",
+    "items": {
+      "speed": {
+        "title": "Velocidad y eficacia",
+        "description": "Construimos con herramientas de IA para que tu proyecto llegue al mercado en menos tiempo."
+      },
+      "human": {
+        "title": "Trato humano, nada genérico",
+        "description": "Cada solución nace de tu idea. Hablas con personas, no con un formulario."
+      },
+      "products": {
+        "title": "Productos propios que nos respaldan",
+        "description": "Just Blocks, Viewly y Dokko demuestran que no solo prometemos: construimos y lanzamos."
+      },
+      "trial": {
+        "title": "Prueba sin riesgo",
+        "description": "15 días para probar nuestros sistemas antes de decidir. Sin presiones."
+      }
+    }
+  },
+  "trial": {
+    "days": "15 días",
+    "title": "Pruébalo 15 días. Sin compromiso.",
+    "description": "Usa nuestros sistemas como si ya fueran tuyos. Al terminar, decides si adquieres la licencia.",
+    "cta": "Empezar mi prueba de 15 días"
+  },
+  "portfolioPreview": {
+    "title_pre": "Lo que ya hemos",
+    "title_accent": "construido",
+    "subtitle": "Productos propios y proyectos reales que demuestran lo que podemos hacer.",
+    "viewAll": "Ver portafolio completo"
+  },
+  "aboutTeaser": {
+    "title": "Detrás de cada línea de código hay personas que entienden tu idea.",
+    "description": "Creemos que emprender no debería frenarse por la tecnología. Por eso construimos soluciones digitales a la medida de cada idea, con trato cercano y sin plantillas genéricas.",
+    "cta": "Conócenos"
+  },
+  "blogPreview": {
+    "title_pre": "Ideas para emprender con",
+    "title_accent": "tecnología",
+    "subtitle": "Artículos prácticos para emprendedores que quieren usar la tecnología a su favor.",
+    "viewAll": "Ver todos los artículos",
+    "readMore": "Leer más"
+  },
+  "ctaFinal": {
+    "title_pre": "¿Tienes una idea? Hagámosla",
+    "title_accent": "realidad",
+    "title_post": ".",
+    "cta": "Hablemos de tu idea"
+  },
+  "servicesPage": {
+    "title": "Servicios",
+    "subtitle": "Desde tu primera idea hasta un sistema funcionando.",
+    "breadcrumb": "Servicios",
+    "twoWays": {
+      "title": "Dos formas de trabajar con nosotros",
+      "custom": {
+        "title": "A la medida",
+        "description": "Te escuchamos, diseñamos la solución juntos y construimos exactamente lo que necesitas. Se cotiza según tu idea y alcance.",
+        "cta": "Cotizar mi proyecto"
+      },
+      "license": {
+        "title": "Sistema en renta (licencia)",
+        "description": "Usa un sistema listo con módulos para tu tipo de negocio. Prueba 15 días sin compromiso y decide después.",
+        "cta": "Probar 15 días"
+      }
+    },
+    "dokko": {
+      "title": "Conoce Dokko",
+      "subtitle": "Sistema multi-tenant con módulos para distintos negocios",
+      "description": "Dokko es nuestro sistema de gestión en renta. Un solo sistema, varios módulos adaptados a cada tipo de negocio.",
+      "modules": {
+        "real-estate": "Inmobiliarias",
+        "salon": "Salones",
+        "barbershop": "Barberías",
+        "gym": "Gimnasios"
+      },
+      "cta": "Probar 15 días",
+      "portfolio": "Ver Dokko en el portafolio"
+    },
+    "process": {
+      "title": "Cómo trabajamos",
+      "steps": [
+        { "number": "01", "title": "Nos cuentas tu idea", "description": "Nos escribes, agendamos una llamada y entendemos qué quieres construir. Sin formularios eternos." },
+        { "number": "02", "title": "Diseñamos la solución contigo", "description": "Definimos el alcance, la tecnología y el plan. Tú apruebas antes de que escribamos una sola línea de código." },
+        { "number": "03", "title": "Construimos rápido con ayuda de IA", "description": "Desarrollamos con herramientas de IA para llegar antes al mercado, sin perder calidad ni criterio humano." },
+        { "number": "04", "title": "Lo pruebas y lo lanzamos", "description": "Revisas, nos das feedback y lanzamos juntos. Seguimos contigo después del lanzamiento." }
+      ]
+    },
+    "faqTitle": "Preguntas frecuentes",
+    "faqCta": "¿Tienes otra duda? Escríbenos",
+    "ctaTitle_pre": "¿Listo para",
+    "ctaTitle_accent": "empezar",
+    "ctaTitle_post": "?",
+    "ctaCta": "Hablemos de tu idea"
+  },
+  "portfolioPage": {
+    "title": "Portafolio",
+    "subtitle": "Productos propios y proyectos para clientes.",
+    "ownProducts": "Nuestros productos",
+    "ownProductsNote": "Los juegos son creaciones propias de UXcode Solutions.",
+    "clientProjects": "Proyectos para clientes",
+    "clientNote": "Cada proyecto para clientes parte de su idea y de sus objetivos.",
+    "ctaTitle_pre": "¿Quieres algo así para tu",
+    "ctaTitle_accent": "negocio",
+    "ctaTitle_post": "?",
+    "ctaCta": "Hablemos de tu proyecto"
+  },
+  "projects": {
+    "just-blocks": {
+      "name": "Just Blocks",
+      "description": "Juego multijugador de bloques, una evolución del clásico estilo Block Blast. Disponible en Google Play."
+    },
+    "viewly": {
+      "name": "Viewly",
+      "description": "App para ver contenido en sincronía con amigos a distancia mediante salas. Compatible con Netflix, YouTube, Max, Prime Video y más."
+    },
+    "dokko": {
+      "name": "Dokko",
+      "description": "Sistema multi-tenant con módulos para distintos negocios: inmobiliarias, salones, barberías y gimnasios. Disponible en renta por licencia, con 15 días de prueba."
+    },
+    "uxcode-solutions": {
+      "name": "UXcode Solutions",
+      "description": "Nuestra propia marca y este sitio web, construido con Nuxt 4 y Vue 3."
+    },
+    "nexo-inmuebles": {
+      "name": "Nexo Inmuebles",
+      "description": "Sitio web de una inmobiliaria para mostrar inmuebles en venta y captar contactos (leads)."
+    }
+  },
+  "status": {
+    "published": "Publicado",
+    "in-progress": "En desarrollo"
+  },
+  "links": {
+    "playStore": "Ver en Google Play",
+    "web": "Visitar sitio",
+    "demo": "Ver demo",
+    "soon": "Enlace próximamente",
+    "here": "Estás aquí",
+    "trial": "Probar 15 días"
+  },
+  "aboutPage": {
+    "title_pre": "Somos",
+    "title_accent": "UXcode Solutions",
+    "tagline": "We create IDEAS, we create INNOVATION!",
+    "storyTitle": "Nuestra historia",
+    "story": "Creemos que emprender no debería frenarse por la tecnología. Por eso construimos apps, sistemas y soluciones digitales a la medida de cada idea, con trato cercano y sin plantillas genéricas. Cada proyecto que tomamos es una idea en la que creemos. Trabajamos rápido, con criterio y con el mismo cuidado que le pondríamos a nuestros propios productos.",
+    "valuesTitle": "En qué creemos",
+    "values": {
+      "human": { "title": "Humanos", "description": "Hablas con personas reales que entienden tu proyecto." },
+      "fast": { "title": "Rápidos", "description": "Usamos IA para construir más rápido sin sacrificar calidad." },
+      "custom": { "title": "A tu medida", "description": "Cada solución nace de tu idea, no de una plantilla." },
+      "transparent": { "title": "Transparentes", "description": "Te contamos cómo funciona todo, sin letra chica." }
+    },
+    "aiTitle": "Cómo usamos la inteligencia artificial",
+    "aiText": "Usamos inteligencia artificial para construir más rápido. Las ideas, las decisiones y el cuidado por tu proyecto siguen siendo humanos.",
+    "statsTitle": "Nuestros números (reales)",
+    "stats": {
+      "products": { "number": "3", "label": "Productos propios" },
+      "trial": { "number": "15", "label": "Días de prueba" },
+      "tech": { "number": "2", "label": "Tecnologías principales" }
+    },
+    "cta1": "Trabajemos juntos",
+    "cta2": "Ver nuestro portafolio"
+  },
+  "blogPage": {
+    "title": "Blog",
+    "subtitle": "Ideas y consejos para emprendedores que quieren construir con tecnología.",
+    "readMore": "Leer más",
+    "by": "Por",
+    "reading": "de lectura",
+    "back": "← Volver al blog",
+    "continueReading": "Sigue leyendo",
+    "copyLink": "Copiar enlace",
+    "linkCopied": "¡Enlace copiado!",
+    "ctaTitle": "¿Tienes una idea? Hablemos",
+    "ctaCta": "Contáctanos"
+  },
+  "contactPage": {
+    "title_pre": "Hablemos de tu",
+    "title_accent": "idea",
+    "subtitle": "Cuéntanos qué quieres construir. Te respondemos lo antes posible.",
+    "emailCard": "Correo electrónico",
+    "whatsappCard": "WhatsApp",
+    "socialCard": "Redes sociales",
+    "trialCard": "Prueba de 15 días",
+    "trialCardDesc": "Aplica a nuestros sistemas como Dokko. Prueba 15 días sin compromiso.",
+    "pendingContact": "Pendiente de configurar",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "¿Cómo te llamamos?",
+      "email": "Correo electrónico",
+      "emailPlaceholder": "tu{'@'}correo.com",
+      "subject": "Motivo",
+      "subjectPlaceholder": "¿En qué podemos ayudarte?",
+      "subjectOptions": {
+        "prueba": "Prueba de 15 días",
+        "medida": "Desarrollo a medida",
+        "renta": "Renta de un sistema",
+        "otro": "Otro"
+      },
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntanos tu idea...",
+      "charCount": "caracteres",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "successTitle": "¡Mensaje enviado!",
+      "successText": "Te contactaremos pronto.",
+      "successCta": "Volver al inicio",
+      "errorTitle": "Algo salió mal",
+      "errorText": "Por favor intenta de nuevo. Tu mensaje no se ha perdido.",
+      "retry": "Reintentar",
+      "errors": {
+        "name": "Escribe tu nombre (mínimo 2 caracteres)",
+        "email": "Ingresa un correo válido",
+        "message": "Cuéntanos un poco más (mínimo 10 caracteres)"
+      }
+    },
+    "nextSteps": {
+      "title": "¿Qué pasa después de escribirnos?",
+      "steps": [
+        { "number": "1", "title": "Recibimos tu mensaje", "description": "Lo leemos con atención y lo analizamos antes de responderte." },
+        { "number": "2", "title": "Te contactamos", "description": "Agendamos una llamada o conversación para entender tu idea a fondo." },
+        { "number": "3", "title": "Te proponemos la mejor solución", "description": "Sin compromisos: te decimos qué haríamos, cómo y en cuánto tiempo." }
+      ]
+    }
+  },
+  "serviceWizard": {
+    "title_pre": "¿No sabes qué necesita tu",
+    "title_accent": "negocio",
+    "title_post": "?",
+    "subtitle": "Responde esta pregunta y descubre qué solución se adapta mejor a tu idea.",
+    "question": "¿Cuál es tu principal objetivo ahora mismo?",
+    "options": [
+      {
+        "id": "opt-1",
+        "text": "Quiero automatizar procesos, gestionar citas, inventario o personal interno.",
+        "recommends": "sistemas-gestion"
+      },
+      {
+        "id": "opt-2",
+        "text": "Busco que mis clientes interactúen conmigo desde sus teléfonos (app nativa).",
+        "recommends": "apps-flutter"
+      },
+      {
+        "id": "opt-3",
+        "text": "Necesito una web profesional para atraer clientes, darme a conocer o vender.",
+        "recommends": "soluciones-digitales"
+      },
+      {
+        "id": "opt-4",
+        "text": "Quiero un sistema de reservas/gestión rápido y económico para usar ya mismo.",
+        "recommends": "sistemas-renta"
+      }
+    ],
+    "result": {
+      "prefix": "Lo ideal para ti es:",
+      "cta": "Saber más"
+    },
+    "reset": "Volver a empezar"
+  },
+  "error404": {
+    "title": "404",
+    "subtitle": "Página no encontrada",
+    "description": "La página que buscas no existe o fue movida. Pero no te preocupes, podemos llevarte de regreso.",
+    "cta1": "Volver al inicio",
+    "cta2": "Ver servicios"
+  },
+  "seo": {
+    "siteName": "UXcode Solutions",
+    "home": {
+      "title": "Inicio | UXcode Solutions",
+      "description": "Convertimos ideas en apps, sistemas y soluciones digitales. Rápido, a tu medida y con trato humano. Prueba nuestros sistemas 15 días sin compromiso."
+    },
+    "services": {
+      "title": "Servicios | UXcode Solutions",
+      "description": "Apps móviles con Flutter, sistemas de gestión a medida, soluciones web y sistemas en renta. Desde tu idea hasta un producto funcionando."
+    },
+    "portfolio": {
+      "title": "Portafolio | UXcode Solutions",
+      "description": "Just Blocks, Viewly, Dokko y más. Conoce los productos y proyectos que hemos construido."
+    },
+    "about": {
+      "title": "Nosotros | UXcode Solutions",
+      "description": "Somos UXcode Solutions: un equipo que convierte ideas en productos digitales reales, con trato humano y potenciado con IA."
+    },
+    "blog": {
+      "title": "Blog | UXcode Solutions",
+      "description": "Artículos sobre tecnología, emprendimiento y desarrollo de software para que uses la tecnología a tu favor."
+    },
+    "contact": {
+      "title": "Contacto | UXcode Solutions",
+      "description": "Cuéntanos tu idea. Hablemos de apps, sistemas o prueba nuestros productos 15 días sin compromiso."
+    }
+  }
+}

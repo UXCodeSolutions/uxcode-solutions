@@ -1,0 +1,37 @@
+{
+  "_note": "Este archivo está preparado para la traducción al inglés. Completar los valores cuando se active el idioma inglés en el sitio. Cambiar strategy en nuxt.config.ts a 'prefix_except_default'.",
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "cta": "Try 15 days",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "pill": "Software development for entrepreneurs",
+    "h1_pre": "Your idea, live in",
+    "h1_accent": "record time",
+    "h1_post": ".",
+    "subtitle": "At UXcode Solutions we turn ideas into apps, management systems and digital solutions. Fast, tailored and with a human touch.",
+    "ctaPrimary": "Learn more",
+    "ctaSecondary": "View portfolio",
+    "chip1": "AI-powered + human judgment",
+    "chip2": "15-day trial on our systems",
+    "chip3": "We build our own products"
+  },
+  "seo": {
+    "siteName": "UXcode Solutions",
+    "home": {
+      "title": "Home | UXcode Solutions",
+      "description": "We turn ideas into apps, systems and digital solutions. Fast, tailored and with a human touch. Try our systems free for 15 days."
+    },
+    "services": { "title": "Services | UXcode Solutions", "description": "" },
+    "portfolio": { "title": "Portfolio | UXcode Solutions", "description": "" },
+    "about": { "title": "About | UXcode Solutions", "description": "" },
+    "blog": { "title": "Blog | UXcode Solutions", "description": "" },
+    "contact": { "title": "Contact | UXcode Solutions", "description": "" }
+  }
+}
