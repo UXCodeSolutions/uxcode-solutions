@@ -146,7 +146,7 @@ const num2 = ref<HTMLElement | null>(null)
 const num3 = ref<HTMLElement | null>(null)
 
 // Valores objetivo (hardcodeados como dice el prompt para que sean reales)
-const targets = [3, 15, 2]
+const targets: [number, number, number] = [3, 15, 2]
 
 const animateValue = (obj: HTMLElement | null, start: number, end: number, duration: number) => {
   if (!obj) return
@@ -169,7 +169,7 @@ const animateValue = (obj: HTMLElement | null, start: number, end: number, durat
 onMounted(() => {
   // Usar IntersectionObserver para animar cuando entren al viewport
   const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
+    if (entries[0]!.isIntersecting) {
       animateValue(num1.value, 0, targets[0], 2000)
       animateValue(num2.value, 0, targets[1], 2000)
       animateValue(num3.value, 0, targets[2], 2000)

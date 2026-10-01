@@ -9,6 +9,12 @@
     "cta": "Prueba 15 días",
     "skip": "Saltar al contenido"
   },
+  "trial": {
+    "days": "15 Días",
+    "title": "Prueba nuestros sistemas sin costo",
+    "description": "Comprueba el valor de nuestras soluciones como Dokko. Solicita tu acceso y utilízalo gratis por 15 días.",
+    "cta": "Empezar prueba o Contáctanos"
+  },
   "footer": {
     "tagline": "We create IDEAS, we create INNOVATION!",
     "description": "Convertimos ideas en apps, sistemas y soluciones digitales. Rápido, a tu medida y con trato humano.",

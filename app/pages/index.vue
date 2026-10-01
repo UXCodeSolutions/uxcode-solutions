@@ -101,7 +101,7 @@
             class="blog-preview__card-wrap"
             v-reveal="{ delay: index * 100 }"
           >
-            <SectionsPostCard :post="post" />
+            <SectionsPostCard :post="(post as any)" />
           </div>
         </div>
 
@@ -140,10 +140,10 @@ const featuredProjects = projects.filter(p => p.featured).slice(0, 3)
 
 // Obtener los 3 artículos más recientes del blog
 const { data: recentPosts } = await useAsyncData('recent-posts', () => {
-  return queryCollection('blog')
-    .order('date', 'DESC')
+  return queryContent('blog')
+    .sort({ date: -1 })
     .limit(3)
-    .all()
+    .find()
 })
 </script>
 

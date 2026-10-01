@@ -32,7 +32,7 @@
             class="blog-grid__item"
             v-reveal="{ delay: (index % 3) * 100 }"
           >
-            <SectionsPostCard :post="post" />
+          <SectionsPostCard :post="(post as any)" />
           </div>
         </div>
 
@@ -73,9 +73,9 @@ useSeoMeta({
 
 // Cargar posts de @nuxt/content
 const { data: posts } = await useAsyncData('blog-posts', () => {
-  return queryCollection('blog')
-    .order('date', 'DESC')
-    .all()
+  return queryContent('blog')
+    .sort({ date: -1 })
+    .find()
 })
 </script>
 

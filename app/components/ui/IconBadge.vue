@@ -8,20 +8,32 @@
 </template>
 
 <script setup lang="ts">
-// Mapa de iconos disponibles → componentes importados dinámicamente
-const iconMap: Record<string, string> = {
-  smartphone: 'IconSmartphone',
-  dashboard: 'IconDashboard',
-  'layout-dashboard': 'IconDashboard',
-  globe: 'IconGlobe',
-  key: 'IconKey',
-  rocket: 'IconRocket',
-  users: 'IconUsers',
-  zap: 'IconZap',
-  shield: 'IconShield',
-  check: 'IconCheck',
-  mail: 'IconMail',
-  whatsapp: 'IconWhatsapp',
+import IconSmartphone from './icons/IconSmartphone.vue'
+import IconDashboard from './icons/IconDashboard.vue'
+import IconGlobe from './icons/IconGlobe.vue'
+import IconKey from './icons/IconKey.vue'
+import IconRocket from './icons/IconRocket.vue'
+import IconUsers from './icons/IconUsers.vue'
+import IconZap from './icons/IconZap.vue'
+import IconShield from './icons/IconShield.vue'
+import IconCheck from './icons/IconCheck.vue'
+import IconMail from './icons/IconMail.vue'
+import IconWhatsapp from './icons/IconWhatsapp.vue'
+
+// Mapa de componentes directamente referenciados
+const iconMap: Record<string, any> = {
+  smartphone: IconSmartphone,
+  dashboard: IconDashboard,
+  'layout-dashboard': IconDashboard,
+  globe: IconGlobe,
+  key: IconKey,
+  rocket: IconRocket,
+  users: IconUsers,
+  zap: IconZap,
+  shield: IconShield,
+  check: IconCheck,
+  mail: IconMail,
+  whatsapp: IconWhatsapp,
 }
 
 const props = withDefaults(defineProps<{
@@ -38,9 +50,7 @@ const resolvedSize = computed(() => props.size ?? props.iconSize)
 
 // Resolver el componente de icono según el prop
 const iconComponent = computed(() => {
-  const name = iconMap[props.icon]
-  if (!name) return null
-  return resolveComponent('UiIcons' + name)
+  return iconMap[props.icon] || null
 })
 </script>
 

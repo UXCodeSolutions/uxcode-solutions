@@ -57,9 +57,7 @@ const route = useRoute()
 const slug = route.params.slug as string
 
 const { data: post } = await useAsyncData(`blog-${slug}`, () => {
-  return queryCollection('blog')
-    .path(`/blog/${slug}`)
-    .first()
+  return queryContent('blog', slug).findOne()
 })
 
 if (!post.value) {

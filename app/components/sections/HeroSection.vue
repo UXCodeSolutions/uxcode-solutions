@@ -67,13 +67,14 @@
 
         <!-- Teléfono mockup principal centrado en el anillo -->
         <div class="hero__phone-wrap float">
-          <img
+          <NuxtImg
             src="/images/hero-phone.png"
             alt="App dashboard en móvil"
             class="hero__phone-img"
             width="340"
             height="520"
             loading="eager"
+            format="webp"
           />
         </div>
 
@@ -253,8 +254,8 @@
 /* ── Teléfono ── */
 .hero__phone-wrap {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 20%;
+  left: 40%;
   transform: translate(-50%, -50%);
   z-index: 2;
 }
@@ -263,8 +264,9 @@
   height: 440px;
   width: auto;
   object-fit: contain;
-  /* Los JPG del render con fondo oscuro usan lighten para fundir con el fondo */
   filter: drop-shadow(0 0 40px rgba(0, 255, 255, 0.25));
+  /* Usamos scale en vez de afectar las dimensiones reales para no romper el layout */
+  transform: scale(1.65) translateY(-5%);
 }
 
 /* ── Tarjetas de estadísticas flotantes ── */

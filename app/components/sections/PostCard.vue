@@ -25,7 +25,7 @@
       <div class="post-card__content">
         <div class="post-card__meta">
           <span class="pill">{{ post.category }}</span>
-          <span class="post-card__meta-text">{{ formatDate(post.date) }} · {{ post.readingTime }}</span>
+          <span class="post-card__meta-text">{{ post.date ? formatDate(post.date) : '' }} · {{ post.readingTime }}</span>
         </div>
         <h3 class="post-card__title">{{ post.title }}</h3>
         <p class="post-card__desc">{{ post.description }}</p>
@@ -39,15 +39,16 @@
 </template>
 
 <script setup lang="ts">
-// Tipo extraído del esquema de Content
+// Interface interna del componente – los campos del frontmatter son opcionales
+// para ser compatibles con ParsedContent de Nuxt Content v2
 interface Post {
   _path?: string
-  title: string
-  description: string
+  title?: string
+  description?: string
   image?: string | null
-  date: string
-  category: string
-  readingTime: string
+  date?: string
+  category?: string
+  readingTime?: string
 }
 
 defineProps<{ post: Post }>()
