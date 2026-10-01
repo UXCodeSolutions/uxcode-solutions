@@ -67,14 +67,13 @@
 
         <!-- Teléfono mockup principal centrado en el anillo -->
         <div class="hero__phone-wrap float">
-          <NuxtImg
+          <img
             src="/images/hero-phone.png"
             alt="App dashboard en móvil"
             class="hero__phone-img"
             width="340"
             height="520"
             loading="eager"
-            format="webp"
           />
         </div>
 

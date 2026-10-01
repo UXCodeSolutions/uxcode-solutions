@@ -45,13 +45,13 @@
       </nav>
 
       <!-- CTA de escritorio -->
-      <BaseButton
+      <UiBaseButton
         to="/contacto?motivo=prueba"
         variant="primary"
         class="navbar__cta"
       >
-        {{ $t('nav.cta') }}
-      </BaseButton>
+        Empieza ahora
+      </UiBaseButton>
 
       <!-- Botón hamburguesa (móvil) -->
       <button
@@ -99,9 +99,9 @@
           </ul>
 
           <div class="navbar__mobile-cta">
-            <BaseButton to="/contacto?motivo=prueba" variant="primary" @click="closeMenu">
-              {{ $t('nav.cta') }}
-            </BaseButton>
+            <UiBaseButton to="/contacto?motivo=prueba" variant="primary" @click="closeMenu">
+              Empieza ahora
+            </UiBaseButton>
           </div>
         </nav>
       </div>
@@ -174,6 +174,7 @@ onMounted(() => {
 .navbar__inner {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
   gap: 2rem;
 }

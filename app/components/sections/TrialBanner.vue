@@ -1,18 +1,20 @@
 <!-- TrialBanner.vue — Banner destacado "Prueba de 15 días" -->
 <template>
-  <section class="trial-banner container" aria-label="Prueba de 15 días" v-reveal>
+  <section class="trial-banner container" aria-label="Contacto y Prueba" v-reveal>
     <div class="trial-banner__inner">
       <div class="trial-banner__bg" aria-hidden="true" />
 
       <div class="trial-banner__content">
-        <div class="trial-banner__badge">
-          <span class="gradient-text-animated">{{ $t('trial.days') }}</span>
-        </div>
         <h2 class="trial-banner__title">{{ $t('trial.title') }}</h2>
         <p class="trial-banner__desc">{{ $t('trial.description') }}</p>
-        <UiBaseButton to="/contacto?motivo=prueba" variant="primary" class="trial-banner__cta">
-          {{ $t('trial.cta') }}
-        </UiBaseButton>
+        <div class="trial-banner__actions">
+          <UiBaseButton to="/contacto?motivo=prueba" variant="primary" class="trial-banner__cta">
+            Empieza ahora
+          </UiBaseButton>
+          <UiBaseButton to="/contacto" variant="secondary" class="trial-banner__cta">
+            Contáctanos
+          </UiBaseButton>
+        </div>
       </div>
 
       <!-- Decoración visual -->
@@ -51,15 +53,14 @@
 
 .trial-banner__content { position: relative; z-index: 1; max-width: 600px; margin-inline: auto; }
 
-.trial-banner__badge {
-  font-family: var(--font-title);
-  font-size: clamp(3rem, 8vw, 5rem);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-
 .trial-banner__title { font-size: var(--fs-h3); margin-bottom: 1rem; }
 .trial-banner__desc { color: var(--text-muted); margin-bottom: 2rem; }
+.trial-banner__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .trial-banner__decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 
