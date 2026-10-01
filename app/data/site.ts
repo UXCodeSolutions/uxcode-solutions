@@ -8,11 +8,11 @@ export const site = {
   description: 'Convertimos ideas en apps, sistemas y soluciones digitales. Rápido, a tu medida y con trato humano.',
   siteUrl: '', // Pendiente: dominio de Vercel o propio
   email: 'uxcode.solutions@gmail.com',
-  whatsapp: '', // Pendiente: número de WhatsApp (ej. '18091234567')
+  whatsapp: '18295481502', // WhatsApp number
   social: {
     instagram: 'https://www.instagram.com/uxcode_solutions',
     linkedin: '',  // Pendiente: URL completa de perfil
     github: '',    // Pendiente: URL completa de perfil
-    whatsapp: '',  // Próximamente
+    whatsapp: 'https://wa.me/18295481502',
   },
 }

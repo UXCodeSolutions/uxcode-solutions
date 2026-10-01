@@ -139,7 +139,7 @@ const formatDate = (dateStr: string) => {
 .post-card__title { font-size: 1.25rem; margin-bottom: 0.5rem; transition: color var(--transition-base); }
 @media (hover: hover) { .post-card:hover .post-card__title { color: var(--accent); } }
 
-.post-card__desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.post-card__desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 
 .post-card__footer { margin-top: auto; }
 .post-card__read-more { font-size: 0.9rem; font-weight: 600; color: var(--accent); display: inline-flex; transition: transform var(--transition-base); }
