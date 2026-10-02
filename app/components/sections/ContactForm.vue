@@ -103,26 +103,43 @@
         <input id="bot-field" v-model="form.honeypot" type="text" tabindex="-1" />
       </div>
 
-      <!-- Submit -->
-      <UiBaseButton
-        type="submit"
-        variant="primary"
-        :loading="isSubmitting"
-        :disabled="isSubmitting || (Object.values(touched).some(v => v) && !isValid)"
-        class="form-submit"
-      >
-        {{ isSubmitting ? $t('contactPage.form.sending') : $t('contactPage.form.submit') }}
-      </UiBaseButton>
+      <!-- Submit Actions -->
+      <div class="form-actions">
+        <p class="form-actions-title">¿Cómo prefieres enviar tu mensaje?</p>
+        <div class="form-actions-buttons">
+          <UiBaseButton
+            type="button"
+            variant="primary"
+            :disabled="Object.values(touched).some(v => v) && !isValid"
+            class="form-submit"
+            @click="sendViaWhatsApp"
+          >
+            <UiIconsIconWhatsapp :size="18" class="mr-2" />
+            Enviar por WhatsApp
+          </UiBaseButton>
+
+          <UiBaseButton
+            type="button"
+            variant="secondary"
+            :disabled="Object.values(touched).some(v => v) && !isValid"
+            class="form-submit"
+            @click="sendViaEmail"
+          >
+            <UiIconsIconMail :size="18" class="mr-2" />
+            Enviar por Correo
+          </UiBaseButton>
+        </div>
+      </div>
     </form>
   </div>
 </template>
 
 <script setup lang="ts">
+import { site } from '~/data/site'
+
 const route = useRoute()
 const { form, errors, touched, isValid, onBlur, onInput, validateAll } = useFormValidation()
 
-const isSubmitting = ref(false)
-const success = ref(false)
 const submitError = ref('')
 
 // Preseleccionar opciones según query params (?motivo=prueba&sistema=dokko&mensaje=...)
@@ -139,28 +156,19 @@ onMounted(() => {
   }
 })
 
-const handleSubmit = async () => {
+const sendViaWhatsApp = () => {
   if (!validateAll()) return
+  const text = `Hola UXcode Solutions, soy ${form.name}.\nMi correo: ${form.email}\nMotivo: ${form.subject}\n\nMensaje:\n${form.message}`
+  const url = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(text)}`
+  window.open(url, '_blank')
+}
 
-  isSubmitting.value = true
-  submitError.value = ''
-
-  try {
-    const res = await $fetch('/api/contact', {
-      method: 'POST',
-      body: form
-    })
-
-    if (res && res.ok) {
-      success.value = true
-    } else {
-      submitError.value = 'El servidor rechazó la petición.'
-    }
-  } catch (err: any) {
-    submitError.value = err.data?.message || err.message || 'Error de conexión.'
-  } finally {
-    isSubmitting.value = false
-  }
+const sendViaEmail = () => {
+  if (!validateAll()) return
+  const body = `Hola UXcode Solutions,\n\nSoy ${form.name}.\nMi correo es: ${form.email}\n\nMensaje:\n${form.message}`
+  const subject = `Contacto desde sitio web - Motivo: ${form.subject}`
+  const url = `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  window.location.href = url
 }
 </script>
 
@@ -227,7 +235,33 @@ const handleSubmit = async () => {
 
 .form-error { display: block; font-size: 0.85rem; color: var(--danger); margin-top: 0.5rem; }
 
-.form-submit { width: 100%; margin-top: 1rem; }
+.form-submit { flex: 1; display: flex; align-items: center; justify-content: center; margin-top: 0; }
+.mr-2 { margin-right: 0.5rem; }
+
+.form-actions {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.form-actions-title {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.form-actions-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .form-actions-buttons {
+    flex-direction: row;
+  }
+}
 
 .contact-form__alert {
   background: rgba(255,92,108,0.1);
