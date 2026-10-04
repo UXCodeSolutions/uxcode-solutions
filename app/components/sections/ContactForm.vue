@@ -1,25 +1,8 @@
 <!-- ContactForm.vue — Formulario de contacto con validación en tiempo real -->
 <template>
   <div class="contact-form-wrapper">
-    <!-- Estado de éxito -->
-    <div v-if="success" class="contact-form__success fade-in">
-      <div class="contact-form__success-icon">
-        <UiIconsIconCheck :size="48" />
-      </div>
-      <h3 class="contact-form__success-title">{{ $t('contactPage.form.successTitle') }}</h3>
-      <p class="contact-form__success-text">{{ $t('contactPage.form.successText') }}</p>
-      <UiBaseButton to="/" variant="secondary" class="contact-form__success-cta">
-        {{ $t('contactPage.form.successCta') }}
-      </UiBaseButton>
-    </div>
-
     <!-- Formulario -->
-    <form v-else class="contact-form" @submit.prevent="handleSubmit" novalidate>
-      <!-- Error general / de red -->
-      <div v-if="submitError" class="contact-form__alert" role="alert">
-        <strong>{{ $t('contactPage.form.errorTitle') }}:</strong> {{ submitError }}
-      </div>
-
+    <form class="contact-form" @submit.prevent novalidate>
       <!-- Nombre -->
       <div class="form-group">
         <label for="name" class="form-label">{{ $t('contactPage.form.name') }}</label>
@@ -139,8 +122,6 @@ import { site } from '~/data/site'
 
 const route = useRoute()
 const { form, errors, touched, isValid, onBlur, onInput, validateAll } = useFormValidation()
-
-const submitError = ref('')
 
 // Preseleccionar opciones según query params (?motivo=prueba&sistema=dokko&mensaje=...)
 onMounted(() => {
