@@ -14,7 +14,7 @@
       <!-- Logo -->
       <NuxtLink to="/" class="navbar__logo" :aria-label="`${$t('seo.siteName')} — Inicio`">
         <img
-          src="/images/logo.png"
+          src="/images/logotipo.png"
           alt="UXcode Solutions"
           class="navbar__logo-img"
           width="140"

@@ -11,7 +11,7 @@
       <div class="footer__col footer__col--brand">
         <NuxtLink to="/" class="footer__logo-link" :aria-label="`${site.name} — Inicio`">
           <img
-            src="/images/logo.png"
+            src="/images/logotipo.png"
             alt="UXcode Solutions"
             class="footer__logo-img"
             width="130"
